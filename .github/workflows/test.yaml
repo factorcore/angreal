@@ -63,8 +63,8 @@ jobs:
           python-version: "3.12"
       - run: pip install uv
       - run: export VIRTUAL_ENV=./.venv
+      - run: mkdir .venv
       - run: uv pip install maturin pytest -v
-      - run: maturin build
       - run: pip install .
       - run: cargo test -v -- --nocapture --test-threads=1
       - run: python -m pytest -svv
