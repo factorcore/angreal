@@ -90,7 +90,7 @@ jobs:
       - run: maturin build
       - run: pip install .
       - run: cargo test -v -- --nocapture --test-threads=1
-      - run: PATH=.venv/bin:$PATH python -m pytest -svv
+      - run: angreal test python
 
   angreal-tests-macosx:
     name: "angreal run-tests macos"
