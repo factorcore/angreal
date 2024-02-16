@@ -69,8 +69,6 @@ jobs:
       - run: python -m pytest -svv
 
   angreal-tests-windows:
-    env:
-      VIRTUAL_ENV: Python_ROOT_DIR
     name: "angreal run-tests windows"
     runs-on: windows-latest
     steps:
@@ -94,8 +92,6 @@ jobs:
       - run: python -m pytest -svv
 
   angreal-tests-macosx:
-    env:
-      VIRTUAL_ENV: ${{ env.Python_ROOT_DIR }}
     name: "angreal run-tests macos"
     runs-on: macos-11
     steps:
