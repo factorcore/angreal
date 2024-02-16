@@ -65,7 +65,8 @@ jobs:
       - run: uv venv
       - run: . .venv/bin/activate
       - run: uv pip install maturin pytest -v
-      - run: echo $VIRTUAL_ENV && which maturin
+      - run: echo $VIRTUAL_ENV
+      - run: which maturin
       - run: maturin build
       - run: pip install .
       - run: cargo test -v -- --nocapture --test-threads=1
