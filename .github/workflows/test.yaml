@@ -61,13 +61,13 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: "3.12"
-      - run: |
+        run: |
             pip install uv
             uv pip install maturin pytest
             uv pip install angreal@.
             cargo test -v -- --nocapture --test-threads=1
             python -m pytest -svv
-      - env:
+        env:
           VIRTUAL_ENV: /opt/hostedtoolcache/Python/3.12.2/x64/
 
   angreal-tests-windows:
