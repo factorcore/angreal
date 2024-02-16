@@ -67,7 +67,7 @@ jobs:
       - run: uv pip install maturin pytest
       - run: uv pip install angreal@.
       - run: cargo test -v -- --nocapture --test-threads=1
-      - run: pytest -svv
+      - run: python -m pytest -svv
 
   angreal-tests-windows:
     name: "angreal run-tests windows"
