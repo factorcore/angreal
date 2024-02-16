@@ -46,7 +46,7 @@ jobs:
 
   angreal-tests-linux:
     env:
-      VIRTUAL_ENV: $Python_ROOT_DIR
+      VIRTUAL_ENV: ${{ env.Python_ROOT_DIR }}
     name: "angreal run-tests linux"
     runs-on: ubuntu-latest
     steps:
@@ -71,7 +71,7 @@ jobs:
 
   angreal-tests-windows:
     env:
-      VIRTUAL_ENV: $Python_ROOT_DIR
+      VIRTUAL_ENV: ${{ env.Python_ROOT_DIR }}
     name: "angreal run-tests windows"
     runs-on: windows-latest
     steps:
@@ -96,7 +96,7 @@ jobs:
 
   angreal-tests-macosx:
     env:
-      VIRTUAL_ENV: $Python_ROOT_DIR
+      VIRTUAL_ENV: ${{ env.Python_ROOT_DIR }}
     name: "angreal run-tests macos"
     runs-on: macos-11
     steps:
